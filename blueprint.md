@@ -14,20 +14,14 @@ This project is a simple, visually appealing Lotto Number Generator web applicat
     *   **Animation:** A "fireworks" animation will be triggered when the numbers are generated, adding a celebratory feel.
     *   **Typography:** Clear, legible fonts are used for the title and numbers.
 *   **Web Components:** The application will be structured using a custom element `<lotto-generator>` to encapsulate the functionality.
+*   **Theme Toggle:** A toggle switch to change between dark and light modes.
 
 ## Current Plan
-
-1.  **Create `blueprint.md`:** Document the project overview, features, and plan. (Done)
-2.  **Modify `index.html`:**
-    *   Update the title to "Lotto Number Generator".
-    *   Add a `<lotto-generator>` custom element to the body.
-3.  **Modify `style.css`:**
-    *   Add styles for the overall page, including a dark theme and a background texture.
-    *   Style the components of the lotto generator, including the number display and the "Generate" button.
-    *   Implement the fireworks animation using CSS keyframes.
-4.  **Modify `main.js`:**
-    *   Define the `LottoGenerator` class as a custom element.
-    *   Implement the logic for generating unique random numbers.
-    *   Handle the button click event to trigger number generation and the animation.
-    *   Dynamically create and style the number elements based on the generated numbers.
+1. **Add Theme Toggle**
+    *   Add a theme toggle switch to `index.html`.
+    *   Update `style.css` with CSS variables for colors to support both dark and light themes.
+    *   Implement the theme switching logic in `main.js`.
+2. **Deploy to Git**
+    *   Commit the changes with a descriptive message.
+    *   Push the new feature to the main branch of the remote repository.
 

@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const lottoNumbersContainer = document.querySelector('.lotto-numbers');
+    const themeSwitch = document.getElementById('checkbox');
 
     const getBallColor = (number) => {
         if (number <= 10) return 'ball-color-1';
@@ -47,6 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const numbers = generateLottoNumbers();
         displayNumbers(numbers);
         triggerFireworks();
+    });
+
+    // Theme switcher
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.body.classList.add(currentTheme);
+        if (currentTheme === 'dark-mode') {
+            themeSwitch.checked = true;
+        }
+    }
+
+    themeSwitch.addEventListener('change', function() {
+        if(this.checked) {
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light-mode');
+        }
     });
 
     // Initial generation
